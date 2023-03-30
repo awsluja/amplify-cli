@@ -29,7 +29,7 @@ ARG CODEBUILD_SRC_DIR
 # Put Node.js PKG binaries in cache location
 RUN mkdir -p ~/.pkg-cache
 
-ADD $CODEBUILD_SRC_DIR/pkg-cache ~/.pkg-cache
+ADD pkg-cache ~/.pkg-cache
 
 RUN ls ~/.pkg-cache
 
