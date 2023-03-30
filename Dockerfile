@@ -24,8 +24,6 @@ RUN sudo apt-get install -y \
 
 RUN sudo pip install awscli
 
-ARG CODEBUILD_SRC_DIR
-
 # Put Node.js PKG binaries in cache location
 RUN mkdir -p ~/.pkg-cache
 
