@@ -25,8 +25,10 @@ RUN sudo apt-get install -y \
 RUN sudo pip install awscli
 
 # Put Node.js PKG binaries in cache location
-WORKDIR /root
+WORKDIR ~
 RUN mkdir -p .pkg-cache
+RUN touch ~/.pkg-cache/test.txt
+RUN ls ~/.pkg-cache
 COPY pkg-cache .pkg-cache
 RUN ls .pkg-cache
 
