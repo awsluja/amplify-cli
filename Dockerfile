@@ -28,7 +28,8 @@ RUN sudo pip install awscli
 WORKDIR /root
 COPY Readme.md /root/.pkg-cache/
 COPY pkg-cache/ /root/.pkg-cache/
-RUN ls /root/.pkg-cache/
+RUN ls
+RUN ls .pkg-cache
 
 # Install Java
 WORKDIR /tmp
