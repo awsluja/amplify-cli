@@ -28,7 +28,9 @@ RUN sudo pip install awscli
 RUN mkdir -p ~/.pkg-cache
 RUN touch ~/.pkg-cache/test2.txt
 RUN ls ~/.pkg-cache
+COPY Readme.md ~/.pkg-cache
 COPY pkg-cache/ ~/.pkg-cache
+COPY pkg-cache/v3.4 ~/.pkg-cache
 RUN ls ~/.pkg-cache
 
 # Install Java
