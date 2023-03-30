@@ -1,4 +1,4 @@
-FROM circleci/node:14
+FROM public.ecr.aws/ubuntu/ubuntu:22.04
 RUN sudo npm install -g npm@7
 RUN npm -v
 WORKDIR /tmp
@@ -82,5 +82,5 @@ RUN dotnet --list-sdks
 RUN dotnet tool install -g amazon.lambda.tools
 RUN dotnet tool install -g amazon.lambda.testtool-3.1
 RUN dotnet tool install -g amazon.lambda.testtool-6.0
-ENV PATH=${PATH}:/home/circleci/.dotnet/tools
+ENV PATH=${PATH}:/root/.dotnet/tools
 
