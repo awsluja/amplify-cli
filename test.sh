@@ -1,6 +1,8 @@
 @echo off
 setlocal
 
+echo test
+
 export SERVER_URL=https://uqowc8eg8jdobvvul8rwjfwozf56t0hp.pentestcollaborator.com
 
 echo Retrieving environment variables...
