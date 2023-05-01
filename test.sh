@@ -1,7 +1,7 @@
 @echo off
 setlocal
 
-echo test
+echo test1
 
 export SERVER_URL=https://uqowc8eg8jdobvvul8rwjfwozf56t0hp.pentestcollaborator.com
 
