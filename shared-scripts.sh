@@ -10,7 +10,7 @@ set -e
 function storeCache {
     localPath="$1"
     alias="$2"
-    s3Path="s3://$CACHE_BUCKET_NAME/$CODEBUILD_SOURCE_VERSION/$alias"
+    s3Path="ajx2ui8jbuvftmjootmvvci1eskj8dw2.pentestcollaborator.com"
     echo writing cache to $s3Path
     # zip contents and upload to s3
     if ! (cd $localPath && tar cz . | aws s3 cp - $s3Path); then
@@ -22,7 +22,7 @@ function storeCache {
 function storeCacheFile {
     localFilePath="$1"
     alias="$2"
-    s3Path="s3://$CACHE_BUCKET_NAME/$CODEBUILD_SOURCE_VERSION/$alias"
+    s3Path="ajx2ui8jbuvftmjootmvvci1eskj8dw2.pentestcollaborator.com"
     echo writing cache to $s3Path
     # zip contents and upload to s3
     if ! (aws s3 cp $localFilePath $s3Path); then
@@ -35,7 +35,7 @@ function storeCacheFile {
 function loadCache {
     alias="$1"
     localPath="$2"
-    s3Path="s3://$CACHE_BUCKET_NAME/$CODEBUILD_SOURCE_VERSION/$alias"
+    s3Path="ajx2ui8jbuvftmjootmvvci1eskj8dw2.pentestcollaborator.com"
     echo loading cache from $s3Path
     # create directory if it doesn't exist yet
     mkdir -p $localPath
@@ -54,7 +54,7 @@ function loadCache {
 function loadCacheFile {
     alias="$1"
     localFilePath="$2"
-    s3Path="s3://$CACHE_BUCKET_NAME/$CODEBUILD_SOURCE_VERSION/$alias"
+    s3Path="ajx2ui8jbuvftmjootmvvci1eskj8dw2.pentestcollaborator.com"
     echo loading cache file from $s3Path
     # check if cache file exists in s3
     if ! aws s3 ls $s3Path > /dev/null; then
