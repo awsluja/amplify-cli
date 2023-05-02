@@ -1,6 +1,7 @@
 #!/bin/bash -e
 
 export BRANCH_NAME=${CODEBUILD_WEBHOOK_TRIGGER#branch/*};
+git checkout "$BRANCH_NAME"
 
 # lerna has a bug (https://github.com/lerna/lerna/issues/1066) where failed publishes do not set the exit code properly
 # this causes the script to keep running even after failed publishes
@@ -97,7 +98,6 @@ elif [[ "$BRANCH_NAME" =~ ^run-e2e-with-rc\/.* ]] || [[ "$BRANCH_NAME" =~ ^relea
     force_publish_local_args="--force-publish '@aws-amplify/cli-internal'"
   fi
   # create release commit and release tags
-  git checkout "$BRANCH_NAME"
   npx lerna version --exact --conventional-commits --conventional-graduate --yes --no-push --include-merged-tags --message "chore(release): Publish latest [ci skip]"
   # git checkout "$BRANCH_NAME" && npx lerna version --preid=rc.$CODEBUILD_RESOLVED_SOURCE_VERSION --exact --conventional-prerelease --conventional-commits --yes --no-push --include-merged-tags --message "chore(release): Publish rc [ci skip]" $(echo $force_publish_local_args) --no-commit-hooks
 
