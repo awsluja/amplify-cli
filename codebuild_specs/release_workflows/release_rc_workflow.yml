@@ -2,7 +2,6 @@ version: 0.2
 env:
   shell: bash
   compute-type: BUILD_GENERAL1_MEDIUM
-  git-credential-helper: yes
   variables:
     AWS_DEFAULT_REGION: us-east-1
     AWS_REGION: us-east-1
@@ -31,6 +30,7 @@ batch:
       buildspec: codebuild_specs/publish_to_local_registry.yml
       env:
         compute-type: BUILD_GENERAL1_LARGE
+        git-credential-helper: yes
       debug-session: true
       # depend-on:
       #   - build_linux
