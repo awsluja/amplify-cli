@@ -1,6 +1,6 @@
 #!/bin/bash -e
 
-export BRANCH_NAME=${CODEBUILD_WEBHOOK_TRIGGER#branch/*};
+export BRANCH_NAME=${CODEBUILD_SOURCE_VERSION#branch/*};
 git checkout "$BRANCH_NAME"
 
 # lerna has a bug (https://github.com/lerna/lerna/issues/1066) where failed publishes do not set the exit code properly
