@@ -5,7 +5,7 @@ phases:
   build:
     commands:
       - codebuild-breakpoint
-      - export CODEBUILD_SOURCE_VERSION=5ab50743baa1d1eb47c58e8c1f0133034c705f04
+      # - export CODEBUILD_SOURCE_VERSION=5ab50743baa1d1eb47c58e8c1f0133034c705f04
       - source ./shared-scripts.sh && _publishToLocalRegistry
 
 artifacts:
