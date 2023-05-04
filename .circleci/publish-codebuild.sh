@@ -1,6 +1,6 @@
 #!/bin/bash -e
-echo $CODEBUILD_SOURCE_VERSION
-export BRANCH_NAME=${CODEBUILD_SOURCE_VERSION#branch/*};
+export BRANCH_NAME=$(git branch -a --contains HEAD | sed -n 2p | awk '{ printf $1 }')
+echo branch name $BRANCH_NAME
 git checkout "$BRANCH_NAME"
 
 # lerna has a bug (https://github.com/lerna/lerna/issues/1066) where failed publishes do not set the exit code properly
