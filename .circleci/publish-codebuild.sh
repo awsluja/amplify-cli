@@ -1,5 +1,5 @@
 #!/bin/bash -e
-
+echo $CODEBUILD_SOURCE_VERSION
 export BRANCH_NAME=${CODEBUILD_SOURCE_VERSION#branch/*};
 git checkout "$BRANCH_NAME"
 
