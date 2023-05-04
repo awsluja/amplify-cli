@@ -98,12 +98,14 @@ elif [[ "$BRANCH_NAME" =~ ^run-e2e-with-rc\/.* ]] || [[ "$BRANCH_NAME" =~ ^relea
     force_publish_local_args="--force-publish '@aws-amplify/cli-internal'"
   fi
   # create release commit and release tags
+  echo lerna version
   npx lerna version --exact --conventional-commits --conventional-graduate --yes --no-push --include-merged-tags --message "chore(release): Publish latest [ci skip]"
   # git checkout "$BRANCH_NAME" && npx lerna version --preid=rc.$CODEBUILD_RESOLVED_SOURCE_VERSION --exact --conventional-prerelease --conventional-commits --yes --no-push --include-merged-tags --message "chore(release): Publish rc [ci skip]" $(echo $force_publish_local_args) --no-commit-hooks
 
 
   # if publishing locally to verdaccio
   if [[ "$LOCAL_PUBLISH_TO_LATEST" == "true" ]]; then
+    echo publishing locally to verdaccio
     # publish to verdaccio with no dist tag (default to latest)
     # lernaPublishExitOnFailure from-package --git-head $CODEBUILD_RESOLVED_SOURCE_VERSION --yes --no-push
     lernaPublishExitOnFailure from-git --yes --no-push
@@ -114,6 +116,7 @@ elif [[ "$BRANCH_NAME" =~ ^run-e2e-with-rc\/.* ]] || [[ "$BRANCH_NAME" =~ ^relea
 
   # publish versions that were just computed
   # lernaPublishExitOnFailure from-package --git-head $CODEBUILD_RESOLVED_SOURCE_VERSION --yes --no-push --dist-tag rc
+  echo publish versions that were just computed
   lernaPublishExitOnFailure from-git --yes --no-push --dist-tag rc
 
   # push release commit
