@@ -42,5 +42,5 @@ artifacts:
 reports:
   aws-amplify-cli-e2e-coverage-report:
     files:
-      - 'coverage/clover.xml'
+      - 'packages/amplify-e2e-tests/coverage/clover.xml'
     file-format: CLOVERXML
