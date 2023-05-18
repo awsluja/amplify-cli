@@ -172,7 +172,7 @@ function _publishToLocalRegistry {
     unsetNpmRegistryUrl
 
     echo Generate Change Log
-    git reset --soft HEAD~1
+    # git reset --soft HEAD~1
     yarn ts-node scripts/unified-changelog.ts
     cat UNIFIED_CHANGELOG.md
     
