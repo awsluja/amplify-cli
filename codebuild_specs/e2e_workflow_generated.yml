@@ -20,5 +20,3 @@ batch:
         variables:
           WAIT_FOR_IDS_FILE_PATH: ./codebuild_specs/wait_for_ids.json
       buildspec: codebuild_specs/aggregate_e2e_reports.yml
-      depend-on:
-        - upload_pkg_binaries
