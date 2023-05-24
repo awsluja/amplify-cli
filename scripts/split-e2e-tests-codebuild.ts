@@ -100,7 +100,10 @@ export function loadConfigBase() {
   return yaml.load(fs.readFileSync(CODEBUILD_CONFIG_BASE_PATH, 'utf8'));
 }
 export function saveConfig(config: any): void {
-  const output = ['# auto generated file. DO NOT EDIT manually', yaml.dump(config, { noRefs: true })];
+  const output = [
+    '# auto generated file. DO NOT EDIT manually',
+    yaml.dump(config, { noRefs: true, condenseFlow: true, noArrayIndent: true, lineWidth: -1 }),
+  ];
   fs.writeFileSync(`${CODEBUILD_GENERATE_CONFIG_PATH}.yml`, output.join('\n'));
 }
 function getTestFiles(dir: string, pattern = 'src/**/*.test.ts'): string[] {
