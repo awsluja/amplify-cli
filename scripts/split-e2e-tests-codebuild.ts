@@ -100,7 +100,7 @@ export function loadConfigBase() {
   return yaml.load(fs.readFileSync(CODEBUILD_CONFIG_BASE_PATH, 'utf8'));
 }
 export function saveConfig(config: any): void {
-  const output = ['# auto generated file. DO NOT EDIT manually', yaml.dump(config, { noRefs: true })];
+  const output = ['# auto generated file. DO NOT EDIT manually', yaml.dump(config, { noRefs: true, lineWidth: -1 })];
   fs.writeFileSync(`${CODEBUILD_GENERATE_CONFIG_PATH}.yml`, output.join('\n'));
 }
 function getTestFiles(dir: string, pattern = 'src/**/*.test.ts'): string[] {
@@ -110,7 +110,7 @@ type COMPUTE_TYPE = 'BUILD_GENERAL1_MEDIUM' | 'BUILD_GENERAL1_LARGE';
 type BatchBuildJob = {
   identifier: string;
   env: {
-    'compute-type': COMPUTE_TYPE;
+    'compute-type'?: COMPUTE_TYPE;
     variables: [string: string];
   };
 };
@@ -152,14 +152,6 @@ const splitTestsV3 = (
   pickTests: ((testSuites: string[]) => string[]) | undefined,
   withAggregateReports = false,
 ) => {
-  if (!withAggregateReports && baseJobLinux?.reports) {
-    delete baseJobLinux.reports;
-  }
-
-  if (!withAggregateReports && baseJobWindows?.reports) {
-    delete baseJobWindows.reports;
-  }
-
   const output: any[] = [];
   let testSuites = getTestFiles(testDirectory);
   if (pickTests && typeof pickTests === 'function') {
@@ -269,14 +261,17 @@ const splitTestsV3 = (
   });
 
   if (withAggregateReports) {
+    const dependeeIdentifiersFileContents = JSON.stringify(dependeeIdentifiers, null, 4);
+    const waitForIdsFilePath = './codebuild_specs/wait_for_ids.json';
+    fs.writeFileSync(waitForIdsFilePath, dependeeIdentifiersFileContents);
     const reportsAggregator = {
       identifier: 'aggregate_e2e_reports',
       env: {
         'compute-type': 'BUILD_GENERAL1_MEDIUM',
-        variables: { WAIT_FOR_IDS: dependeeIdentifiers.join(',') },
+        variables: { WAIT_FOR_IDS_FILE_PATH: waitForIdsFilePath },
       },
       buildspec: 'codebuild_specs/aggregate_e2e_reports.yml',
-      'depend-on': ['upload_pkg_binaries'],
+      'depend-on': ['upb'],
     };
     result.push(reportsAggregator);
   }
@@ -290,20 +285,14 @@ function main(): void {
     {
       identifier: 'run_e2e_tests_linux',
       buildspec: 'codebuild_specs/run_e2e_tests_linux.yml',
-      env: {
-        'compute-type': 'BUILD_GENERAL1_MEDIUM',
-      },
-      'depend-on': ['upload_pkg_binaries'],
+      env: {},
+      'depend-on': ['upb'],
     },
     {
       identifier: 'run_e2e_tests_windows',
       buildspec: 'codebuild_specs/run_e2e_tests_windows.yml',
-      env: {
-        type: 'WINDOWS_SERVER_2019_CONTAINER',
-        'compute-type': 'BUILD_GENERAL1_MEDIUM',
-        image: '$WINDOWS_IMAGE_2019',
-      },
-      'depend-on': ['build_windows', 'upload_pkg_binaries'],
+      env: {},
+      'depend-on': ['build_windows', 'upb'],
     },
     join(REPO_ROOT, 'packages', 'amplify-e2e-tests'),
     false,
@@ -314,10 +303,8 @@ function main(): void {
     {
       identifier: 'migration_tests_v5',
       buildspec: 'codebuild_specs/migration_tests_v5.yml',
-      env: {
-        'compute-type': 'BUILD_GENERAL1_SMALL',
-      },
-      'depend-on': ['upload_pkg_binaries'],
+      env: {},
+      'depend-on': ['upb'],
     },
     undefined,
     join(REPO_ROOT, 'packages', 'amplify-migration-tests'),
@@ -330,10 +317,8 @@ function main(): void {
     {
       identifier: 'migration_tests_v6',
       buildspec: 'codebuild_specs/migration_tests_v6.yml',
-      env: {
-        'compute-type': 'BUILD_GENERAL1_SMALL',
-      },
-      'depend-on': ['upload_pkg_binaries'],
+      env: {},
+      'depend-on': ['upb'],
     },
     undefined,
     join(REPO_ROOT, 'packages', 'amplify-migration-tests'),
@@ -346,10 +331,8 @@ function main(): void {
     {
       identifier: 'migration_tests_v10',
       buildspec: 'codebuild_specs/migration_tests_v10.yml',
-      env: {
-        'compute-type': 'BUILD_GENERAL1_SMALL',
-      },
-      'depend-on': ['upload_pkg_binaries'],
+      env: {},
+      'depend-on': ['upb'],
     },
     undefined,
     join(REPO_ROOT, 'packages', 'amplify-migration-tests'),
