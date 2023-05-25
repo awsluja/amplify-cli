@@ -202,7 +202,7 @@ function _uploadPkgBinaries {
     loadCache repo-out-arm $CODEBUILD_SRC_DIR/out
     loadCache repo-out-linux $CODEBUILD_SRC_DIR/out
     loadCache repo-out-macos $CODEBUILD_SRC_DIR/out
-    loadCache repo-out-win $CODEBUILD_SRC_DIR/out
+    # loadCache repo-out-win $CODEBUILD_SRC_DIR/out
 
     echo Done loading binaries
     ls $CODEBUILD_SRC_DIR/out
