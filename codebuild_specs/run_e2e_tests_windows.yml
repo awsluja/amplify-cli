@@ -27,6 +27,7 @@ env:
 phases:
   build:
     commands:
+      - yarn run production-build
       - choco install -fy jq
       - bash ./codebuild_specs/scripts-windows/load-e2e-cache.sh
       - bash ./codebuild_specs/scripts-windows/rename-packaged-cli.sh
