@@ -18,12 +18,12 @@ batch:
       buildspec: codebuild_specs/build_linux.yml
       env:
         compute-type: BUILD_GENERAL1_LARGE
-    # - identifier: build_windows
-    #   buildspec: codebuild_specs/build_windows.yml
-    #   env:
-    #     type: WINDOWS_SERVER_2019_CONTAINER
-    #     compute-type: BUILD_GENERAL1_LARGE
-    #     image: $WINDOWS_IMAGE_2019
+    - identifier: build_windows
+      buildspec: codebuild_specs/build_windows.yml
+      env:
+        type: WINDOWS_SERVER_2019_CONTAINER
+        compute-type: BUILD_GENERAL1_LARGE
+        image: $WINDOWS_IMAGE_2019
     - identifier: test
       buildspec: codebuild_specs/test.yml
       env:
@@ -1450,7 +1450,7 @@ batch:
           CLI_REGION: ap-northeast-1
           USE_PARENT_ACCOUNT: false
       depend-on:
-        # - build_windows
+        - build_windows
         - upb
     # - identifier: w_api_3_api_6b_api_1_layer_1
     #   buildspec: codebuild_specs/run_e2e_tests_windows.yml
