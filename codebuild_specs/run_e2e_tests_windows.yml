@@ -28,6 +28,10 @@ phases:
       - choco install -fy jq
       - bash ./codebuild_specs/scripts-windows/load-e2e-cache.sh
       - bash ./codebuild_specs/scripts-windows/rename-packaged-cli-0.sh
-      - cp $env:CODEBUILD_SRC_DIR\out\amplify.exe $env:homedrive\$env:homepath\AppData\Local\Microsoft\WindowsApps
+      - echo $env:CODEBUILD_SRC_DIR
+      - echo $env:HOME
+      - echo $env:homepath
+      - echo $env:homepath
+      - cp $env:CODEBUILD_SRC_DIR\out\amplify.exe $env:HOME\AppData\Local\Microsoft\WindowsApps
       - bash ./codebuild_specs/scripts-windows/rename-packaged-cli-2.sh
       - bash ./codebuild_specs/scripts-windows/run-e2e-windows.sh
