@@ -30,4 +30,5 @@ phases:
       - bash ./codebuild_specs/scripts-windows/rename-packaged-cli.sh
       - yarn clean
       - yarn production-build
+      - yarn build-tests
       - bash ./codebuild_specs/scripts-windows/run-e2e-windows.sh
