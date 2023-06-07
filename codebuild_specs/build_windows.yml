@@ -4,9 +4,9 @@ env:
 phases:
   build:
     commands:
-      - yarn install
       - cd scripts
       - yarn
+      - yarn install
       - yarn ts-node remove-pkg-fetch-checksum.ts
       - cd ..
       - yarn --immutable
