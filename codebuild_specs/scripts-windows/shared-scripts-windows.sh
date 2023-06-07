@@ -112,7 +112,7 @@ function _saveBuild {
     storeCache $CODEBUILD_SRC_DIR repo-windows
     storeCache $HOME/AppData/Local/Yarn/Cache/v6 .cache-windows
 }
-function _install_packaged_cli_win {
+function _install_packaged_cli_win_0 {
     echo Install Amplify Packaged CLI to PATH
     # rename the command to amplify
     cd $CODEBUILD_SRC_DIR/out
@@ -121,13 +121,16 @@ function _install_packaged_cli_win {
     echo Move to CLI Binary to already existing PATH
     # This is a Hack to make sure the Amplify CLI is in the PATH
 
-    cp $CODEBUILD_SRC_DIR/out/amplify.exe $HOME/AppData/Local/Microsoft/WindowsApps
     ls $HOME/AppData/Local/Microsoft/WindowsApps
 
     # reset working directory
     cd $CODEBUILD_SRC_DIR
 }
-
+function _install_packaged_cli_win_2 {
+    ls $HOME/AppData/Local/Microsoft/WindowsApps
+    # reset working directory
+    cd $CODEBUILD_SRC_DIR
+}
 
 function _scanArtifacts {
     if ! yarn ts-node .circleci/scan_artifacts_codebuild.ts; then
