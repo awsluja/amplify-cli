@@ -117,14 +117,7 @@ function _install_packaged_cli_win_0 {
     # rename the command to amplify
     cd $CODEBUILD_SRC_DIR/out
     cp amplify-pkg-win-x64.exe amplify.exe
-
     echo Move to CLI Binary to already existing PATH
-    # This is a Hack to make sure the Amplify CLI is in the PATH
-
-    ls $HOME/AppData/Local/Microsoft/WindowsApps
-
-    # reset working directory
-    cd $CODEBUILD_SRC_DIR
 }
 function _install_packaged_cli_win_2 {
     ls $HOME/AppData/Local/Microsoft/WindowsApps
