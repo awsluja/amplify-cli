@@ -4,6 +4,7 @@ env:
 phases:
   build:
     commands:
+      - yarn install
       - cd scripts
       - yarn
       - yarn ts-node remove-pkg-fetch-checksum.ts
