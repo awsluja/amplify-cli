@@ -187,6 +187,7 @@ batch:
         variables:
           TEST_SUITE: src/__tests__/function_4.test.ts|src/__tests__/interactions.test.ts|src/__tests__/schema-model-a.test.ts|src/__tests__/tags.test.ts
           CLI_REGION: us-west-2
+      debug-session: true
       depend-on:
         - upb
     - identifier: l_auth_1a_auth_trigger_custom_policies_function_function_6
