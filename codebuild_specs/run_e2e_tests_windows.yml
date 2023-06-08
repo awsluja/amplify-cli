@@ -30,8 +30,8 @@ phases:
       - cd $env:CODEBUILD_SRC_DIR\out
       - cp amplify-pkg-win-x64.exe amplify.exe
       - cd $env:CODEBUILD_SRC_DIR
-      - mkdir C:\Program Files\Amplify
-      - cp $env:CODEBUILD_SRC_DIR\out\amplify.exe C:\Program Files\Amplify\
+      - mkdir 'C:\Program Files\Amplify'
+      - cp $env:CODEBUILD_SRC_DIR\out\amplify.exe 'C:\Program Files\Amplify\'
       - $env:Path = 'C:\Program Files\Amplify\;$env:Path'
       - amplify version
       # - $env:Path += '$env:CODEBUILD_SRC_DIR\out\amplify.exe;$env:Path'
