@@ -120,6 +120,7 @@ function _install_packaged_cli_win {
 
     echo Move to CLI Binary to already existing PATH
     # This is a Hack to make sure the Amplify CLI is in the PATH
+    ls $HOME
 
     cp $CODEBUILD_SRC_DIR/out/amplify.exe $HOME/AppData/Local/Microsoft/WindowsApps
     ls $HOME/AppData/Local/Microsoft/WindowsApps
