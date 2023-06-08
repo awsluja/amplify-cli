@@ -124,6 +124,8 @@ function _install_packaged_cli_win {
     cp $CODEBUILD_SRC_DIR/out/amplify.exe $HOME/AppData/Local/Microsoft/WindowsApps
     ls $HOME/AppData/Local/Microsoft/WindowsApps
 
+    amplify version
+
     # reset working directory
     cd $CODEBUILD_SRC_DIR
 }
