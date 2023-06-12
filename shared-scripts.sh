@@ -90,8 +90,8 @@ function _buildLinux {
     yarn --immutable
     yarn production-build
     yarn build-tests
-    storeCache $CODEBUILD_SRC_DIR repo
-    storeCache $HOME/.cache .cache
+    # storeCache $CODEBUILD_SRC_DIR repo
+    # storeCache $HOME/.cache .cache
 }
 function _testLinux {
     echo Run Test
@@ -268,13 +268,13 @@ function _uploadCoverageLinux {
 }
 # END COVERAGE FUNCTIONS
 function _loadE2ECache {
-    loadCache repo $CODEBUILD_SRC_DIR
-    loadCache .cache $HOME/.cache
-    loadCache verdaccio-cache $CODEBUILD_SRC_DIR/../verdaccio-cache
+    # loadCache repo $CODEBUILD_SRC_DIR
+    # loadCache .cache $HOME/.cache
+    # loadCache verdaccio-cache $CODEBUILD_SRC_DIR/../verdaccio-cache
 
     loadCache all-binaries $CODEBUILD_SRC_DIR/out
-    loadCacheFile .amplify-pkg-version $CODEBUILD_SRC_DIR/.amplify-pkg-version
-    loadCacheFile UNIFIED_CHANGELOG.md $CODEBUILD_SRC_DIR/UNIFIED_CHANGELOG.md
+    # loadCacheFile .amplify-pkg-version $CODEBUILD_SRC_DIR/.amplify-pkg-version
+    # loadCacheFile UNIFIED_CHANGELOG.md $CODEBUILD_SRC_DIR/UNIFIED_CHANGELOG.md
 }
 function _runE2ETestsLinux {
     echo RUN E2E Tests Linux

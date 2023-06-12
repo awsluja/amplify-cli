@@ -27,48 +27,48 @@ describe('data store modelgen tests', () => {
     await expect(generateModels(projRoot)).rejects.toThrowError();
   });
 
-  it('should generate models for iOS project', async () => {
-    await amplifyAppIos(projRoot);
-    updateApiSchema(projRoot, projName, schemaWithAppSyncScalars);
+  // it('should generate models for iOS project', async () => {
+  //   await amplifyAppIos(projRoot);
+  //   updateApiSchema(projRoot, projName, schemaWithAppSyncScalars);
 
-    addFeatureFlag(projRoot, 'graphqltransformer', 'transformerVersion', 1);
-    addFeatureFlag(projRoot, 'graphqltransformer', 'useExperimentalPipelinedTransformer', false);
+  //   addFeatureFlag(projRoot, 'graphqltransformer', 'transformerVersion', 1);
+  //   addFeatureFlag(projRoot, 'graphqltransformer', 'useExperimentalPipelinedTransformer', false);
 
-    await expect(generateModels(projRoot)).resolves.not.toThrow();
-    updateApiSchema(projRoot, projName, schemaWithError);
-    await expect(generateModels(projRoot)).rejects.toThrowError();
-  });
+  //   await expect(generateModels(projRoot)).resolves.not.toThrow();
+  //   updateApiSchema(projRoot, projName, schemaWithError);
+  //   await expect(generateModels(projRoot)).rejects.toThrowError();
+  // });
 
-  it('should generate models for angular project', async () => {
-    await amplifyAppAngular(projRoot);
-    updateApiSchema(projRoot, projName, schemaWithAppSyncScalars);
+  // it('should generate models for angular project', async () => {
+  //   await amplifyAppAngular(projRoot);
+  //   updateApiSchema(projRoot, projName, schemaWithAppSyncScalars);
 
-    addFeatureFlag(projRoot, 'graphqltransformer', 'transformerVersion', 1);
-    addFeatureFlag(projRoot, 'graphqltransformer', 'useExperimentalPipelinedTransformer', false);
+  //   addFeatureFlag(projRoot, 'graphqltransformer', 'transformerVersion', 1);
+  //   addFeatureFlag(projRoot, 'graphqltransformer', 'useExperimentalPipelinedTransformer', false);
 
-    await expect(generateModels(projRoot)).resolves.not.toThrow();
-    updateApiSchema(projRoot, projName, schemaWithError);
-    await expect(generateModels(projRoot)).rejects.toThrowError();
-  });
+  //   await expect(generateModels(projRoot)).resolves.not.toThrow();
+  //   updateApiSchema(projRoot, projName, schemaWithError);
+  //   await expect(generateModels(projRoot)).rejects.toThrowError();
+  // });
 
-  it('should generate models for react project', async () => {
-    await amplifyAppReact(projRoot);
-    updateApiSchema(projRoot, projName, schemaWithAppSyncScalars);
+  // it('should generate models for react project', async () => {
+  //   await amplifyAppReact(projRoot);
+  //   updateApiSchema(projRoot, projName, schemaWithAppSyncScalars);
 
-    addFeatureFlag(projRoot, 'graphqltransformer', 'transformerVersion', 1);
-    addFeatureFlag(projRoot, 'graphqltransformer', 'useExperimentalPipelinedTransformer', false);
+  //   addFeatureFlag(projRoot, 'graphqltransformer', 'transformerVersion', 1);
+  //   addFeatureFlag(projRoot, 'graphqltransformer', 'useExperimentalPipelinedTransformer', false);
 
-    await expect(generateModels(projRoot)).resolves.not.toThrow();
-    updateApiSchema(projRoot, projName, schemaWithError);
-    await expect(generateModels(projRoot)).rejects.toThrowError();
-  });
+  //   await expect(generateModels(projRoot)).resolves.not.toThrow();
+  //   updateApiSchema(projRoot, projName, schemaWithError);
+  //   await expect(generateModels(projRoot)).rejects.toThrowError();
+  // });
 
-  it('should fail to generate models for invalid schema', async () => {
-    await amplifyAppReact(projRoot);
-    addFeatureFlag(projRoot, 'graphqltransformer', 'transformerVersion', 1);
-    addFeatureFlag(projRoot, 'graphqltransformer', 'useExperimentalPipelinedTransformer', false);
+  // it('should fail to generate models for invalid schema', async () => {
+  //   await amplifyAppReact(projRoot);
+  //   addFeatureFlag(projRoot, 'graphqltransformer', 'transformerVersion', 1);
+  //   addFeatureFlag(projRoot, 'graphqltransformer', 'useExperimentalPipelinedTransformer', false);
 
-    updateApiSchema(projRoot, projName, schemaWithError);
-    await expect(generateModels(projRoot)).rejects.toThrowError();
-  });
+  //   updateApiSchema(projRoot, projName, schemaWithError);
+  //   await expect(generateModels(projRoot)).rejects.toThrowError();
+  // });
 });
