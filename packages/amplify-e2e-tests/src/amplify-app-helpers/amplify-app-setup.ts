@@ -25,6 +25,9 @@ function amplifyAppAndroid(projRoot: string): Promise<void> {
 }
 
 function amplifyAppIos(projRoot: string): Promise<void> {
+  console.log(__dirname);
+  console.log('IS CI?', isCI());
+  console.log('AMPLIFY BIN PATH', amplifyAppBinPath);
   return new Promise((resolve, reject) => {
     spawn(spawnCommand, ['--platform', 'ios'], { cwd: projRoot, stripColors: true })
       .wait('Successfully created base Amplify Project')
@@ -40,6 +43,9 @@ function amplifyAppIos(projRoot: string): Promise<void> {
 }
 
 function amplifyAppAngular(projRoot: string): Promise<void> {
+  console.log(__dirname);
+  console.log('IS CI?', isCI());
+  console.log('AMPLIFY BIN PATH', amplifyAppBinPath);
   return new Promise((resolve, reject) => {
     spawn(spawnCommand, [], { cwd: projRoot, stripColors: true })
       .wait('What type of app are you building')
@@ -57,6 +63,9 @@ function amplifyAppAngular(projRoot: string): Promise<void> {
 }
 
 function amplifyAppReact(projRoot: string): Promise<void> {
+  console.log(__dirname);
+  console.log('IS CI?', isCI());
+  console.log('AMPLIFY BIN PATH', amplifyAppBinPath);
   return new Promise((resolve, reject) => {
     spawn(spawnCommand, [], { cwd: projRoot, stripColors: true })
       .wait('What type of app are you building')
