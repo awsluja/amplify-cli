@@ -7,6 +7,9 @@ const amplifyAppBinPath = path.join(__dirname, '..', '..', '..', 'amplify-app', 
 const spawnCommand = isCI() ? 'amplify-app' : amplifyAppBinPath;
 
 function amplifyAppAndroid(projRoot: string): Promise<void> {
+  console.log(__dirname);
+  console.log('IS CI?', isCI());
+  console.log('AMPLIFY BIN PATH', amplifyAppBinPath);
   return new Promise((resolve, reject) => {
     spawn(spawnCommand, ['--platform', 'android'], { cwd: projRoot, stripColors: true })
       .wait('Successfully created base Amplify Project')

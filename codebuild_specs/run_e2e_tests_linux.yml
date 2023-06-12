@@ -28,6 +28,7 @@ phases:
       - export NODE_OPTIONS=--max-old-space-size=8096
       - export AMPLIFY_DIR=$CODEBUILD_SRC_DIR/out
       - export AMPLIFY_PATH=$CODEBUILD_SRC_DIR/out/amplify-pkg-linux-x64
+      - export CODEBUILD_SOURCE_VERSION=db87f8016895ac9ccf29075d7e8306f3ae695196
       - echo $AMPLIFY_DIR
       - echo $AMPLIFY_PATH
       - npm install -g ts-node
