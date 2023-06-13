@@ -296,10 +296,17 @@ function runE2eTestCb {
     if [ -f  $FAILED_TEST_REGEX_FILE ]; then
         # read the content of failed tests
         failedTests=$(<$FAILED_TEST_REGEX_FILE)
-        NODE_V8_COVERAGE=$E2E_TEST_COVERAGE_DIR yarn e2e --forceExit --no-cache --maxWorkers=4 $TEST_SUITE -t "$failedTests"
+        yarn e2e --forceExit --no-cache --maxWorkers=4 $TEST_SUITE -t "$failedTests"
     else
-        NODE_V8_COVERAGE=$E2E_TEST_COVERAGE_DIR yarn e2e --forceExit --no-cache --maxWorkers=4 $TEST_SUITE
+        yarn e2e --forceExit --no-cache --maxWorkers=4 $TEST_SUITE
     fi
+    # if [ -f  $FAILED_TEST_REGEX_FILE ]; then
+    #     # read the content of failed tests
+    #     failedTests=$(<$FAILED_TEST_REGEX_FILE)
+    #     NODE_V8_COVERAGE=$E2E_TEST_COVERAGE_DIR yarn e2e --forceExit --no-cache --maxWorkers=4 $TEST_SUITE -t "$failedTests"
+    # else
+    #     NODE_V8_COVERAGE=$E2E_TEST_COVERAGE_DIR yarn e2e --forceExit --no-cache --maxWorkers=4 $TEST_SUITE
+    # fi
 }
 
 function _setupCoverage {
