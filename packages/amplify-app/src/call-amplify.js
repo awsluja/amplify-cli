@@ -16,6 +16,7 @@ const callPkgAmplifyWin = async (args, opts) => {
     shell: 'cmd.exe',
   });
   if (stderr) {
+    console.log("callPkgAmplifyWin", stderr);
     throw new Error(`Amplify failed due to ${stderr}`);
   }
   return stdout;
@@ -28,6 +29,7 @@ const callPkgAmplifyNix = async (args, opts) => {
     shell: 'bash',
   });
   if (stderr) {
+    console.log("callPkgAmplifyNix", stderr);
     throw new Error(`Amplify failed due to ${stderr}`);
   }
   return stdout;
@@ -38,6 +40,7 @@ const callNodeAmplify = async (args, opts) => {
   const amplifyCmd = path.basename(process.argv[1]) === 'amplify-app-dev' ? amplifyDev : amplify;
   const { stdout, stderr } = await execa(amplifyCmd, args, { stdio: opts.inheritIO ? 'inherit' : undefined });
   if (stderr) {
+    console.log("callNodeAmplify", stderr);
     throw new Error(`Amplify failed due to ${stderr}`);
   }
   return stdout;

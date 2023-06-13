@@ -125,7 +125,8 @@ async function amplifyCLIVersionCheck() {
       console.log(`${emoji.get('sweat_smile')} Installing Amplify CLI. Hold tight.`);
       await installAmplifyCLI();
     }
-  } catch {
+  } catch (e){
+    console.log("amplifyCLIVersionCheck", e);
     console.log(`${emoji.get('worried')} Amplify CLI was not found.`);
     console.log(`${emoji.get('sweat_smile')} Installing Amplify CLI. Hold tight.`);
     await installAmplifyCLI();
