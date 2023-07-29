@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.3.25-rc.09247c5dc5.0](https://github.com/aws-amplify/amplify-cli/compare/amplify-go-function-runtime-provider@2.3.24...amplify-go-function-runtime-provider@2.3.25-rc.09247c5dc5.0) (2023-07-29)
+
+
+### Bug Fixes
+
+* Dependabot alerts for semver, tough-cookie ([#12962](https://github.com/aws-amplify/amplify-cli/issues/12962)) ([175a86b](https://github.com/aws-amplify/amplify-cli/commit/175a86b89a54c65bb6e68c0609be503d61e39d63))
+
+
+
+
+
 ## [2.3.24](https://github.com/aws-amplify/amplify-cli/compare/amplify-go-function-runtime-provider@2.3.23...amplify-go-function-runtime-provider@2.3.24) (2023-07-24)
 
 **Note:** Version bump only for package amplify-go-function-runtime-provider
