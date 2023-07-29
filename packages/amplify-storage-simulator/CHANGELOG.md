@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 1.10.1-cbtest2.0 (2023-07-29)
+
+**Note:** Version bump only for package amplify-storage-simulator
+
+
+
+
+
 # [1.10.0](https://github.com/aws-amplify/amplify-cli/compare/amplify-storage-simulator@1.9.1...amplify-storage-simulator@1.10.0) (2023-07-20)
 
 

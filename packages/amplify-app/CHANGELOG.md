@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 5.0.12-cbtest2.0 (2023-07-29)
+
+**Note:** Version bump only for package @aws-amplify/amplify-app
+
+
+
+
+
 ## [5.0.11](https://github.com/aws-amplify/amplify-cli/compare/@aws-amplify/amplify-app@5.0.10...@aws-amplify/amplify-app@5.0.11) (2023-07-24)
 
 **Note:** Version bump only for package @aws-amplify/amplify-app

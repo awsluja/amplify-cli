@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 1.11.1-cbtest2.0 (2023-07-29)
+
+**Note:** Version bump only for package @aws-amplify/amplify-function-plugin-interface
+
+
+
+
+
 # [1.11.0](https://github.com/aws-amplify/amplify-cli/compare/@aws-amplify/amplify-function-plugin-interface@1.10.3...@aws-amplify/amplify-function-plugin-interface@1.11.0) (2023-07-20)
 
 

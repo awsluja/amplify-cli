@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 2.7.1-cbtest2.0 (2023-07-29)
+
+**Note:** Version bump only for package @aws-amplify/amplify-util-import
+
+
+
+
+
 # [2.7.0](https://github.com/aws-amplify/amplify-cli/compare/@aws-amplify/amplify-util-import@2.6.1...@aws-amplify/amplify-util-import@2.7.0) (2023-07-20)
 
 
