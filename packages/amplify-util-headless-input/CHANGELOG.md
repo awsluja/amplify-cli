@@ -3,6 +3,35 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.10.0-rc.359489160.0 (2023-08-01)
+
+
+### Bug Fixes
+
+* @typescript-eslint/no-floating-promises ([#11665](https://github.com/awsluja/amplify-cli/issues/11665)) ([6c64717](https://github.com/awsluja/amplify-cli/commit/6c647177a3518d777677757bebc01f18b71552e3))
+* **import-auth:** headless interface test ([#8402](https://github.com/awsluja/amplify-cli/issues/8402)) ([538eafc](https://github.com/awsluja/amplify-cli/commit/538eafc6cacdd750243ec897dfb9486f5c83daac))
+* manual lint fixes ([#11638](https://github.com/awsluja/amplify-cli/issues/11638)) ([2294cf8](https://github.com/awsluja/amplify-cli/commit/2294cf8bf1ec2d6d58251649871e6e9617c49b23))
+* map headless auth pw recovery to auto-verified attrs ([#9786](https://github.com/awsluja/amplify-cli/issues/9786)) ([f8c9100](https://github.com/awsluja/amplify-cli/commit/f8c9100d0ea0dfe87233624883ff8ae8c9bf48a7))
+
+
+### Features
+
+* **amplify-category-geo:** remove pricing plan walkthrough for Maps and Search ([#9479](https://github.com/awsluja/amplify-cli/issues/9479)) ([7b0079d](https://github.com/awsluja/amplify-cli/commit/7b0079dff4fdf13df5bd8f90213d4b91ccd2287b))
+* **amplify-category-storage:** headless support for S3 ([#8423](https://github.com/awsluja/amplify-cli/issues/8423)) ([76b0e70](https://github.com/awsluja/amplify-cli/commit/76b0e700d6221292a25b384e2ecfc7a64e9916dd))
+* headless command for geo -- map ([#8403](https://github.com/awsluja/amplify-cli/issues/8403)) ([73793b4](https://github.com/awsluja/amplify-cli/commit/73793b44411d329c52bed9337c0933d7066ee4de))
+* headless mode for API category ([#4834](https://github.com/awsluja/amplify-cli/issues/4834)) ([c2e09d7](https://github.com/awsluja/amplify-cli/commit/c2e09d73fd1bb461eeace8f4a7addd70a63047ad))
+* headless update auth ([#5308](https://github.com/awsluja/amplify-cli/issues/5308)) ([b942f35](https://github.com/awsluja/amplify-cli/commit/b942f3589f1df1361ae7eb6e42f18dbf6900d1bf))
+* **import-auth:** add headless support ([#7266](https://github.com/awsluja/amplify-cli/issues/7266)) ([7fa478b](https://github.com/awsluja/amplify-cli/commit/7fa478bbfebbbe70e286eb19d436d772c32c4fd2))
+
+
+### Reverts
+
+* Revert "chore: fixing main to dev merge conflicts (#11696)" ([00fec46](https://github.com/awsluja/amplify-cli/commit/00fec4608096390b5ae2563b5c69453cd48bfa45)), closes [#11696](https://github.com/awsluja/amplify-cli/issues/11696)
+
+
+
+
+
 ## [1.9.13](https://github.com/aws-amplify/amplify-cli/compare/amplify-util-headless-input@1.9.12...amplify-util-headless-input@1.9.13) (2023-06-13)
 
 **Note:** Version bump only for package amplify-util-headless-input

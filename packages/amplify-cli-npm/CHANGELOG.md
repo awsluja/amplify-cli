@@ -3,6 +3,80 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 13.0.0-rc.359489160.0 (2023-08-01)
+
+
+### Bug Fixes
+
+* @typescript-eslint/no-floating-promises ([#11665](https://github.com/aws-amplify/amplify-cli/issues/11665)) ([6c64717](https://github.com/aws-amplify/amplify-cli/commit/6c647177a3518d777677757bebc01f18b71552e3))
+* add check for codebuild when updating url ([#12924](https://github.com/aws-amplify/amplify-cli/issues/12924)) ([d399855](https://github.com/aws-amplify/amplify-cli/commit/d399855bf8004c9ce88a6ba7c00dd42476ac748b))
+* bump API plugin version to update legacy rds transformers ([705d65c](https://github.com/aws-amplify/amplify-cli/commit/705d65cb3385543a37e276ae1e05a707d98cdd5c))
+* don't buffer when extracting binary ([#12621](https://github.com/aws-amplify/amplify-cli/issues/12621)) ([0ee53e6](https://github.com/aws-amplify/amplify-cli/commit/0ee53e612981d5441fb00690f05d25a941e96dd0))
+* npm package version bump ([#10374](https://github.com/aws-amplify/amplify-cli/issues/10374)) ([c728f51](https://github.com/aws-amplify/amplify-cli/commit/c728f5172907bc720e54e031d789eaaf0ac86f85))
+* remove accidental space from amplify path ([#10224](https://github.com/aws-amplify/amplify-cli/issues/10224)) ([eceab8d](https://github.com/aws-amplify/amplify-cli/commit/eceab8d6810d59f4d1b24e3179caa066ef59a574))
+
+
+### chore
+
+* prevent cold start by warming binary immediately after installation ([#10139](https://github.com/aws-amplify/amplify-cli/issues/10139)) ([d7c6ba6](https://github.com/aws-amplify/amplify-cli/commit/d7c6ba6a391ba5ead0eb49e896ae9c1f56239e95))
+
+
+### Continuous Integration
+
+* add arm64 linux deployment ([#10134](https://github.com/aws-amplify/amplify-cli/issues/10134)) ([f04af99](https://github.com/aws-amplify/amplify-cli/commit/f04af99f4877987e75eb025e3855ea1e64dff8ab))
+
+
+* feat!: use NodeJS 18 runtime (#12043) ([4ae0cde](https://github.com/aws-amplify/amplify-cli/commit/4ae0cde8681810b49b88a4ce7c5ae90724706f5e)), closes [#12043](https://github.com/aws-amplify/amplify-cli/issues/12043)
+* feat!: breaking change commit to update cli to aws cdk v2 (#11300) ([80dce09](https://github.com/aws-amplify/amplify-cli/commit/80dce0942ec20b8eee6e69b78242f91656c1aacf)), closes [#11300](https://github.com/aws-amplify/amplify-cli/issues/11300)
+* feat!: breaking change (#10888) ([224a2e0](https://github.com/aws-amplify/amplify-cli/commit/224a2e0e415da18eb0b4249fb88c2c8755ab9224)), closes [#10888](https://github.com/aws-amplify/amplify-cli/issues/10888)
+* feat!: breaking change (#10628) ([7fadbf5](https://github.com/aws-amplify/amplify-cli/commit/7fadbf53b8dc89d768779fb588971f5c5b6e70d7)), closes [#10628](https://github.com/aws-amplify/amplify-cli/issues/10628)
+
+
+### Features
+
+* alias cloudfront ([#10398](https://github.com/aws-amplify/amplify-cli/issues/10398)) ([b147498](https://github.com/aws-amplify/amplify-cli/commit/b147498968462795e8d467ccda8e504b1c860240))
+* allow unknown feature flags if set to false ([#10612](https://github.com/aws-amplify/amplify-cli/issues/10612)) ([d45991c](https://github.com/aws-amplify/amplify-cli/commit/d45991c347e17ef3d77b105e744125ad2d71197e))
+* bump npm package version ([#10375](https://github.com/aws-amplify/amplify-cli/issues/10375)) ([82f05a0](https://github.com/aws-amplify/amplify-cli/commit/82f05a0ad5161d617eb6b5a9ca4f3f0a5efa50b0))
+* bump version ([#12752](https://github.com/aws-amplify/amplify-cli/issues/12752)) ([2def814](https://github.com/aws-amplify/amplify-cli/commit/2def814808a18440a7be71baccda902f07fedc49))
+* dedup appsync functions ([#10289](https://github.com/aws-amplify/amplify-cli/issues/10289)) ([1a5607c](https://github.com/aws-amplify/amplify-cli/commit/1a5607c3e40d3a8144fc5f66a1632d90f061ed99))
+* force minor version bump ([#10994](https://github.com/aws-amplify/amplify-cli/issues/10994)) ([3c39eba](https://github.com/aws-amplify/amplify-cli/commit/3c39ebab9c78702418df11303164a41efd3bc0d6))
+* force minor version bump in cli-npm package ([#11545](https://github.com/aws-amplify/amplify-cli/issues/11545)) ([6f14792](https://github.com/aws-amplify/amplify-cli/commit/6f14792d1db424aa428ec4836fed7d6dd5cccfd0))
+* force version bump ([#11913](https://github.com/aws-amplify/amplify-cli/issues/11913)) ([330b053](https://github.com/aws-amplify/amplify-cli/commit/330b05304467916bdaad955836a3c47930efa0d4))
+* lambda support for yarn2/3 and pnpm package managers ([#12750](https://github.com/aws-amplify/amplify-cli/issues/12750)) ([fd18195](https://github.com/aws-amplify/amplify-cli/commit/fd181952672efb0479ca6955c0c7a45fe248d1b1))
+* migrates analytics category to support in app messaging channel notifications ([#11158](https://github.com/aws-amplify/amplify-cli/issues/11158)) ([9dfbf6c](https://github.com/aws-amplify/amplify-cli/commit/9dfbf6c1aa1031814ea6ea097435e49f9029801a))
+* minor bump for amplify-cli-npm ([#10433](https://github.com/aws-amplify/amplify-cli/issues/10433)) ([1b789bf](https://github.com/aws-amplify/amplify-cli/commit/1b789bfa5e84ac3cf9c7e9b55e456bb01f07aafc))
+* minor version bump ([f7af76d](https://github.com/aws-amplify/amplify-cli/commit/f7af76d5c97908b4ff06b89a019bc8ac9129fb71))
+* no op commit ([#10553](https://github.com/aws-amplify/amplify-cli/issues/10553)) ([4e16f6b](https://github.com/aws-amplify/amplify-cli/commit/4e16f6b5d0c488a9357c3dbca11095bd6c4419b5))
+* no op version bump ([#11325](https://github.com/aws-amplify/amplify-cli/issues/11325)) ([ffe42c5](https://github.com/aws-amplify/amplify-cli/commit/ffe42c5425aa331ba9c6caf0976011b7aa4b95ca))
+* no-op commit ([#10660](https://github.com/aws-amplify/amplify-cli/issues/10660)) ([6cd057a](https://github.com/aws-amplify/amplify-cli/commit/6cd057ab611497fdca0a5f62e519002b5efbeb0b))
+* no-op feat commit to force version bump ([#10506](https://github.com/aws-amplify/amplify-cli/issues/10506)) ([05b3e2c](https://github.com/aws-amplify/amplify-cli/commit/05b3e2c0187bdc0345f1606fe0070f524f01b702))
+* no-op feat commit to force version bump ([#11132](https://github.com/aws-amplify/amplify-cli/issues/11132)) ([9f3bba7](https://github.com/aws-amplify/amplify-cli/commit/9f3bba77a3dc24318df3523c2ceb7029f5fcb56c))
+* pretty print cloudformation event logs  ([#10720](https://github.com/aws-amplify/amplify-cli/issues/10720)) ([aaf2210](https://github.com/aws-amplify/amplify-cli/commit/aaf22103548a329b3092f52736c28c9b5c5b8b8b))
+* revamp help command ([#11667](https://github.com/aws-amplify/amplify-cli/issues/11667)) ([9977127](https://github.com/aws-amplify/amplify-cli/commit/9977127c619ba353bce0590ce04bc8b3e4b6c5f2))
+* uibuilder codegen service ([#12896](https://github.com/aws-amplify/amplify-cli/issues/12896)) ([3fe2f98](https://github.com/aws-amplify/amplify-cli/commit/3fe2f98a99a9daf22efccb23a031882ea2be899b))
+* version bump to 10.8 for cli-npm ([bb4859e](https://github.com/aws-amplify/amplify-cli/commit/bb4859ef2a1b6bf73dc668c82b4bf71d0655a3bd))
+
+
+### BREAKING CHANGES
+
+* Updated NodeJS runtime to 18, removed support for .NET Core 3.1.
+* upgrades cli to cdk v2
+
+* chore: added cli core pkg for  major version
+* convert cli to cdk v2
+
+Co-authored-by: Akshay Upadhyay <akz@amazon.com>
+* hooks file management breaking change
+* this is a breaking change
+* to make sure lerna does the right thing
+* needed to make lerna behave
+
+Co-authored-by: John Corser <xss@amazon.com>
+
+
+
+
+
 ## [12.2.3](https://github.com/aws-amplify/amplify-cli/compare/@aws-amplify/cli@12.2.2...@aws-amplify/cli@12.2.3) (2023-07-28)
 
 **Note:** Version bump only for package @aws-amplify/cli

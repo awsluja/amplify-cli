@@ -3,6 +3,44 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.18.0-rc.359489160.0 (2023-08-01)
+
+
+### Bug Fixes
+
+* add e2e test for geo headless and update schema ([#8636](https://github.com/awsluja/amplify-cli/issues/8636)) ([1e76668](https://github.com/awsluja/amplify-cli/commit/1e76668ae92cb120ebe53a8bf93fa42bee9560fb))
+* automatic lint fixes ([#11636](https://github.com/awsluja/amplify-cli/issues/11636)) ([0e7f70b](https://github.com/awsluja/amplify-cli/commit/0e7f70befbe72d17dfb11f5fed1c8609a13d4a97))
+* headless auth remove oauth when empty config specified ([#5930](https://github.com/awsluja/amplify-cli/issues/5930)) ([bb0d028](https://github.com/awsluja/amplify-cli/commit/bb0d028704f6508402794d5357c7501b366c9099))
+* map headless auth pw recovery to auto-verified attrs ([#9786](https://github.com/awsluja/amplify-cli/issues/9786)) ([f8c9100](https://github.com/awsluja/amplify-cli/commit/f8c9100d0ea0dfe87233624883ff8ae8c9bf48a7))
+
+
+### Features
+
+* add API key extension headless config ([#11037](https://github.com/awsluja/amplify-cli/issues/11037)) ([bd087d7](https://github.com/awsluja/amplify-cli/commit/bd087d7a468f35f1a1e1bae390cf623121310abc))
+* **amplify-category-auth:** enable alternative signup/signin options ([#7461](https://github.com/awsluja/amplify-cli/issues/7461)) ([56a0c35](https://github.com/awsluja/amplify-cli/commit/56a0c35d2cef0fbff27c80f78dba57516ef18afb)), closes [#1546](https://github.com/awsluja/amplify-cli/issues/1546)
+* **amplify-category-geo:** remove pricing plan walkthrough for Maps and Search ([#9479](https://github.com/awsluja/amplify-cli/issues/9479)) ([7b0079d](https://github.com/awsluja/amplify-cli/commit/7b0079dff4fdf13df5bd8f90213d4b91ccd2287b))
+* **amplify-category-storage:** headless support for S3 ([#8423](https://github.com/awsluja/amplify-cli/issues/8423)) ([76b0e70](https://github.com/awsluja/amplify-cli/commit/76b0e700d6221292a25b384e2ecfc7a64e9916dd))
+* **category-geo:** add new map style 2022.12 ([#11621](https://github.com/awsluja/amplify-cli/issues/11621)) ([dc60f7d](https://github.com/awsluja/amplify-cli/commit/dc60f7d1368b3bb4721f51f2404bf7a8f84075c0))
+* **category-geo:** add two new map styles ([#10115](https://github.com/awsluja/amplify-cli/issues/10115)) ([9845573](https://github.com/awsluja/amplify-cli/commit/9845573ab01429a783103e38ccf69137454aa35b))
+* **category-geo:** add two new map styles 2022.10 ([#11262](https://github.com/awsluja/amplify-cli/issues/11262)) ([77a473e](https://github.com/awsluja/amplify-cli/commit/77a473ed78a945681d98b2c14822474aef966dcf))
+* headless add auth ([#5224](https://github.com/awsluja/amplify-cli/issues/5224)) ([9f80512](https://github.com/awsluja/amplify-cli/commit/9f805128a8232278bb27d4fb1eaa5fecf7aa7a63))
+* headless command for geo -- map ([#8403](https://github.com/awsluja/amplify-cli/issues/8403)) ([73793b4](https://github.com/awsluja/amplify-cli/commit/73793b44411d329c52bed9337c0933d7066ee4de))
+* headless mode for API category ([#4834](https://github.com/awsluja/amplify-cli/issues/4834)) ([c2e09d7](https://github.com/awsluja/amplify-cli/commit/c2e09d73fd1bb461eeace8f4a7addd70a63047ad))
+* headless update auth ([#5308](https://github.com/awsluja/amplify-cli/issues/5308)) ([b942f35](https://github.com/awsluja/amplify-cli/commit/b942f3589f1df1361ae7eb6e42f18dbf6900d1bf))
+* **import-auth:** add headless support ([#7266](https://github.com/awsluja/amplify-cli/issues/7266)) ([7fa478b](https://github.com/awsluja/amplify-cli/commit/7fa478bbfebbbe70e286eb19d436d772c32c4fd2))
+* make cognito userpool id optional for headless mode ([#7820](https://github.com/awsluja/amplify-cli/issues/7820)) ([3746f91](https://github.com/awsluja/amplify-cli/commit/3746f91f531b4897e30eaa73ca26943f30a6bc38))
+* Support for Apple Sign In ([#7265](https://github.com/awsluja/amplify-cli/issues/7265)) ([9f5e659](https://github.com/awsluja/amplify-cli/commit/9f5e659d63362c7f47eaa147c68d40d5bcc36fcc))
+* support for sign in with apple ([#7413](https://github.com/awsluja/amplify-cli/issues/7413)) ([00d6676](https://github.com/awsluja/amplify-cli/commit/00d6676b4c1d6995cac01956078f7b6ee6186814))
+
+
+### Reverts
+
+* Revert "chore: fixing main to dev merge conflicts (#11696)" ([00fec46](https://github.com/awsluja/amplify-cli/commit/00fec4608096390b5ae2563b5c69453cd48bfa45)), closes [#11696](https://github.com/awsluja/amplify-cli/issues/11696)
+
+
+
+
+
 ## [1.17.4](https://github.com/aws-amplify/amplify-cli/compare/amplify-headless-interface@1.17.3...amplify-headless-interface@1.17.4) (2023-06-13)
 
 **Note:** Version bump only for package amplify-headless-interface

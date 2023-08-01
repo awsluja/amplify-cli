@@ -3,6 +3,58 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 2.6.0-rc.359489160.0 (2023-08-01)
+
+
+### Bug Fixes
+
+* [#6067](https://github.com/aws-amplify/amplify-cli/issues/6067) - nodejs mock return error from lambda ([#6096](https://github.com/aws-amplify/amplify-cli/issues/6096)) ([d6793c8](https://github.com/aws-amplify/amplify-cli/commit/d6793c8670e4874db23ca08b3d1d7cba4dd0e56e))
+* [#7696](https://github.com/aws-amplify/amplify-cli/issues/7696) - support production package install for function category ([#7812](https://github.com/aws-amplify/amplify-cli/issues/7812)) ([b39141e](https://github.com/aws-amplify/amplify-cli/commit/b39141e9d00bf0dc23318dcc476ed92ab031e88b))
+* **amplify-nodejs-function-runtime-provider:** catch yarn 2 error on lambda build ([#8263](https://github.com/aws-amplify/amplify-cli/issues/8263)) ([2c80057](https://github.com/aws-amplify/amplify-cli/commit/2c80057223963f238206bcdec421c9e118c10626))
+* **amplify-nodejs-function-runtime-provider:** change the exit status appropriately ([#5608](https://github.com/aws-amplify/amplify-cli/issues/5608)) ([2db83ab](https://github.com/aws-amplify/amplify-cli/commit/2db83aba05f62d9a7927da580d85bfe31a3a1d7a))
+* **amplify-nodejs-function-runtime-provider:** fix lambda error format ([#6350](https://github.com/aws-amplify/amplify-cli/issues/6350)) ([0cf5282](https://github.com/aws-amplify/amplify-cli/commit/0cf5282deed96638cc6e9cd286b4d9c3de0b8542)), closes [#5553](https://github.com/aws-amplify/amplify-cli/issues/5553)
+* **amplify-nodejs-function-runtime-provider:** handle lambda pkg errors ([#6126](https://github.com/aws-amplify/amplify-cli/issues/6126)) ([53c3bb3](https://github.com/aws-amplify/amplify-cli/commit/53c3bb31c62e1be8f9b6c10129fc950b88cbb426))
+* **amplify-nodejs-function-runtime-provider:** invoke waits close event before rejects ([#5498](https://github.com/aws-amplify/amplify-cli/issues/5498)) ([cafefd6](https://github.com/aws-amplify/amplify-cli/commit/cafefd65a54fcd8b06ccdc1fb2362eeeff3122d5))
+* **amplify-nodejs-function-runtime-provider:** restore console.log ([#4941](https://github.com/aws-amplify/amplify-cli/issues/4941)) ([bc1aa0b](https://github.com/aws-amplify/amplify-cli/commit/bc1aa0b21df3c969f1ddc0f3c7842ae1337fbdba))
+* **amplify-nodejs-function-runtime-provider:** truncated results ([#5107](https://github.com/aws-amplify/amplify-cli/issues/5107)) ([8f2607c](https://github.com/aws-amplify/amplify-cli/commit/8f2607cadfe3bf71c9b17847c3d6947998dfa76c))
+* **amplify-nodejs-function-runtime-provider:** unhandled errors ([#4418](https://github.com/aws-amplify/amplify-cli/issues/4418)) ([ea19aa2](https://github.com/aws-amplify/amplify-cli/commit/ea19aa27cc2118f9247abe3515a03e72de6c4ef3))
+* **amplify-util-mock:** non-promise lambda failing ([#4203](https://github.com/aws-amplify/amplify-cli/issues/4203)) ([e34b97f](https://github.com/aws-amplify/amplify-cli/commit/e34b97f3750374a8bc8b693d9998fba1ec6f3ea0))
+* Dependabot alerts for semver, tough-cookie ([#12962](https://github.com/aws-amplify/amplify-cli/issues/12962)) ([175a86b](https://github.com/aws-amplify/amplify-cli/commit/175a86b89a54c65bb6e68c0609be503d61e39d63))
+* dotnet fucntion provider fixes, package.json cleanup, add pkg refs ([#3826](https://github.com/aws-amplify/amplify-cli/issues/3826)) ([75361fb](https://github.com/aws-amplify/amplify-cli/commit/75361fb266f15ba954a8b8e935874c74f66eb11a))
+* handle migrated layers with no runtime or multiple runtimes ([#7603](https://github.com/aws-amplify/amplify-cli/issues/7603)) ([856fdf7](https://github.com/aws-amplify/amplify-cli/commit/856fdf7d226c8a6dc47a8e2278b13dd793fee22a))
+* manual lint fixes ([#11638](https://github.com/aws-amplify/amplify-cli/issues/11638)) ([2294cf8](https://github.com/aws-amplify/amplify-cli/commit/2294cf8bf1ec2d6d58251649871e6e9617c49b23))
+* mock handles and prints child proc errors ([#6601](https://github.com/aws-amplify/amplify-cli/issues/6601)) ([ce075d9](https://github.com/aws-amplify/amplify-cli/commit/ce075d91c0b93885229ab3c6000a450c6b8cc56a))
+* new json and snapshot ([#4947](https://github.com/aws-amplify/amplify-cli/issues/4947)) ([336858b](https://github.com/aws-amplify/amplify-cli/commit/336858bca104a2f63353e2db4e2d56b19c19a492))
+* node function executable not found error to print pm name ([#11779](https://github.com/aws-amplify/amplify-cli/issues/11779)) ([9cdb89e](https://github.com/aws-amplify/amplify-cli/commit/9cdb89e17125e44cb8a8b7344f23ee08acfb5a0f))
+* nodejs staleBuild glob ([#4499](https://github.com/aws-amplify/amplify-cli/issues/4499)) ([6fc7281](https://github.com/aws-amplify/amplify-cli/commit/6fc7281aae4b3c76881144b6ba714966c9f9f8ba))
+* parse appSync go function resolvers to JOSN ([#5297](https://github.com/aws-amplify/amplify-cli/issues/5297)) ([43c6e82](https://github.com/aws-amplify/amplify-cli/commit/43c6e8247210446b133fef799ff21cd70ad9e022))
+* pass deserialized obj to node lambda when mocking ([#3895](https://github.com/aws-amplify/amplify-cli/issues/3895)) ([c5a1891](https://github.com/aws-amplify/amplify-cli/commit/c5a1891f218e23434fec3516d845958fddf416d8))
+* prevent symlinks on nodejs package install ([#10293](https://github.com/aws-amplify/amplify-cli/issues/10293)) ([2af11f4](https://github.com/aws-amplify/amplify-cli/commit/2af11f48f04bf1553a9f55e4ec08ce6e72a7e6d6))
+* rename node pluign packages ([#3788](https://github.com/aws-amplify/amplify-cli/issues/3788)) ([7b1f0f2](https://github.com/aws-amplify/amplify-cli/commit/7b1f0f2c7bb67a9d154e8462643fb0fe35e88399))
+* support large payload in Node.js functions ([#4906](https://github.com/aws-amplify/amplify-cli/issues/4906)) ([3733a16](https://github.com/aws-amplify/amplify-cli/commit/3733a161ea09472fe52d5fc8a6515a3e4e726338))
+
+
+### Features
+
+* container-based deployments([#5727](https://github.com/aws-amplify/amplify-cli/issues/5727)) ([fad6377](https://github.com/aws-amplify/amplify-cli/commit/fad6377bd384862ca4429cb1a83eee90efd62b58))
+* create new NodeJS functions with nodejs18.x runtime ([#12394](https://github.com/aws-amplify/amplify-cli/issues/12394)) ([c896259](https://github.com/aws-amplify/amplify-cli/commit/c896259c1c15813d2bd561bd562adae22e0b3ce5))
+* fully populate mock function environment variables ([#6551](https://github.com/aws-amplify/amplify-cli/issues/6551)) ([dceb13a](https://github.com/aws-amplify/amplify-cli/commit/dceb13a76a85a05940078868a3e2e1ca85656938))
+* Lambda layers ([#4697](https://github.com/aws-amplify/amplify-cli/issues/4697)) ([4e97400](https://github.com/aws-amplify/amplify-cli/commit/4e974007d95c894ab4108a2dff8d5996e7e3ce25))
+* lambda layers rework ([#7375](https://github.com/aws-amplify/amplify-cli/issues/7375)) ([a3b7d3e](https://github.com/aws-amplify/amplify-cli/commit/a3b7d3e427e16bac2b2ea27699fe53b48cf47656))
+* lambda support for yarn2/3 and pnpm package managers ([#12750](https://github.com/aws-amplify/amplify-cli/issues/12750)) ([fd18195](https://github.com/aws-amplify/amplify-cli/commit/fd181952672efb0479ca6955c0c7a45fe248d1b1))
+* pre-deploy pull, new login mechanism and pkg cli updates ([#5941](https://github.com/aws-amplify/amplify-cli/issues/5941)) ([7274251](https://github.com/aws-amplify/amplify-cli/commit/7274251faadc1035acce5f44699b172e10e2e67d))
+* Separate prod and dev lambda function builds ([#6494](https://github.com/aws-amplify/amplify-cli/issues/6494)) ([2977c6a](https://github.com/aws-amplify/amplify-cli/commit/2977c6a886b33a38ef46f898a2adc1ffdb6d228b))
+
+
+### Reverts
+
+* Revert "chore: fixing main to dev merge conflicts (#11696)" ([00fec46](https://github.com/aws-amplify/amplify-cli/commit/00fec4608096390b5ae2563b5c69453cd48bfa45)), closes [#11696](https://github.com/aws-amplify/amplify-cli/issues/11696)
+* Revert "ci: add windows e2e test coverage" ([0560b0f](https://github.com/aws-amplify/amplify-cli/commit/0560b0f4a16ce8ce0b7efebb2494c7e2eb8601c8))
+
+
+
+
+
 ## [2.5.3](https://github.com/aws-amplify/amplify-cli/compare/amplify-nodejs-function-runtime-provider@2.5.2...amplify-nodejs-function-runtime-provider@2.5.3) (2023-07-28)
 
 **Note:** Version bump only for package amplify-nodejs-function-runtime-provider

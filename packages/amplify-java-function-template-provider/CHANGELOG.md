@@ -3,6 +3,25 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.6.0-rc.359489160.0 (2023-08-01)
+
+
+### Bug Fixes
+
+* fix java local invoker and api e2e tests ([#3855](https://github.com/aws-amplify/amplify-cli/issues/3855)) ([93af865](https://github.com/aws-amplify/amplify-cli/commit/93af8651d4bedca0b8d08e778a74dc47230d5988))
+* lint warnings ([#12180](https://github.com/aws-amplify/amplify-cli/issues/12180)) ([83d9bf3](https://github.com/aws-amplify/amplify-cli/commit/83d9bf35fa709084605c23bd2f54feadb3bdbb87))
+
+
+### Features
+
+* feature flag implementation ([#4891](https://github.com/aws-amplify/amplify-cli/issues/4891)) ([6d1c632](https://github.com/aws-amplify/amplify-cli/commit/6d1c632952a49cb56670c11c9cb0c3620d0eb332))
+* Java function support for CLI ([#3715](https://github.com/aws-amplify/amplify-cli/issues/3715)) ([a6c677a](https://github.com/aws-amplify/amplify-cli/commit/a6c677ac3073f6081113a1c341d68e1be4f75b2d))
+* Lambda layers ([#4697](https://github.com/aws-amplify/amplify-cli/issues/4697)) ([4e97400](https://github.com/aws-amplify/amplify-cli/commit/4e974007d95c894ab4108a2dff8d5996e7e3ce25))
+
+
+
+
+
 ## [1.5.22](https://github.com/aws-amplify/amplify-cli/compare/amplify-java-function-template-provider@1.5.21...amplify-java-function-template-provider@1.5.22) (2023-07-20)
 
 **Note:** Version bump only for package amplify-java-function-template-provider

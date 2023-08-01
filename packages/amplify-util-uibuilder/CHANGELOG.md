@@ -3,6 +3,52 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.10.0-rc.359489160.0 (2023-08-01)
+
+
+### Bug Fixes
+
+* address UI Builder component generation errors ([#11536](https://github.com/awsluja/amplify-cli/issues/11536)) ([aceec4c](https://github.com/awsluja/amplify-cli/commit/aceec4c098bc85d2e8da0738bbc5e8089ad8ae6e))
+* **amplify-util-uibuilder:** make studio app check static ([#11220](https://github.com/awsluja/amplify-cli/issues/11220)) ([b1fdc86](https://github.com/awsluja/amplify-cli/commit/b1fdc8634f10da558272aa2e98dfdffc28edd74c))
+* **amplify-util-uibuilder:** update codegen-ui to 2.11.0 ([#12265](https://github.com/awsluja/amplify-cli/issues/12265)) ([0dab648](https://github.com/awsluja/amplify-cli/commit/0dab648a9ae50cf58b39263d64862dd34d5fdfc7))
+* **amplify-util-uibuilder:** update codegen-ui to 2.11.1 ([#12352](https://github.com/awsluja/amplify-cli/issues/12352)) ([78590b8](https://github.com/awsluja/amplify-cli/commit/78590b8d4face7bbc0b174337b77b118affc525b))
+* **amplify-util-uibuilder:** update codegen-ui to 2.7.2 ([14c670e](https://github.com/awsluja/amplify-cli/commit/14c670e57ec194da97b4d568508b7dad3b94755f))
+* **amplify-util-uibuilder:** update codegen-ui to 2.8.0 ([#11867](https://github.com/awsluja/amplify-cli/issues/11867)) ([0969a90](https://github.com/awsluja/amplify-cli/commit/0969a9077000f8e57778222b047ae3449302a55f))
+* **cli:** fix grammar in pull warning message ([#11407](https://github.com/awsluja/amplify-cli/issues/11407)) ([984c0f8](https://github.com/awsluja/amplify-cli/commit/984c0f8548cec80d0e14269757cd49b031403097))
+* delete detached forms with a warning ([#11610](https://github.com/awsluja/amplify-cli/issues/11610)) ([7dc9179](https://github.com/awsluja/amplify-cli/commit/7dc9179e6e15e1a261bcb717ec0e777f6f3dd68c))
+* exclude smoketests on windows; remove extraneous dependency ([#12572](https://github.com/awsluja/amplify-cli/issues/12572)) ([0d6bca4](https://github.com/awsluja/amplify-cli/commit/0d6bca41ff7ef4a8a203b3044123b328b77b2b0e))
+* generate default theme if user has no themes ([#11343](https://github.com/awsluja/amplify-cli/issues/11343)) ([13a02ac](https://github.com/awsluja/amplify-cli/commit/13a02ac32de717a518336871b1c741aa2714562b))
+* improved typing for $TSContext ([#11962](https://github.com/awsluja/amplify-cli/issues/11962)) ([3e2ff00](https://github.com/awsluja/amplify-cli/commit/3e2ff00cce8079974394c98b4a843f2246cee7dd))
+* skip automatic form generation when datastore is not enabled ([e45fcc1](https://github.com/awsluja/amplify-cli/commit/e45fcc1a9bdff3d20645fb18bf2e2be34e16beb1))
+* uibuilder e2e tests ([#9922](https://github.com/awsluja/amplify-cli/issues/9922)) ([3e64978](https://github.com/awsluja/amplify-cli/commit/3e649783f5df6a768e4861d1a794591eff214988))
+* **uibuilder:** change recommended ui-react version ([#10766](https://github.com/awsluja/amplify-cli/issues/10766)) ([c70cc1f](https://github.com/awsluja/amplify-cli/commit/c70cc1f9bbb05501804571dee54bd6ee2ead48db))
+* updateUserAttributeSetting during add/update/push flows ([#10773](https://github.com/awsluja/amplify-cli/issues/10773)) ([52c1e49](https://github.com/awsluja/amplify-cli/commit/52c1e49caa5098c37c32c9f2b6f095cfd60454b1))
+
+
+### Features
+
+* add uibuilder improvements including ts generation for components ([#9287](https://github.com/awsluja/amplify-cli/issues/9287)) ([4531d0a](https://github.com/awsluja/amplify-cli/commit/4531d0aaf293ded66abda32d8b4db7c2137daa27))
+* add uibuilder plugin ([#9178](https://github.com/awsluja/amplify-cli/issues/9178)) ([0e95dd8](https://github.com/awsluja/amplify-cli/commit/0e95dd8dc2b9cdcc54dcd7a7b896891e17b37f1d))
+* **amplify-util-uibuilder:** add studio forms ([#11165](https://github.com/awsluja/amplify-cli/issues/11165)) ([6f15294](https://github.com/awsluja/amplify-cli/commit/6f15294d6809639c7d7e7d3aa4378df894168b0b))
+* **amplify-util-uibuilder:** formFeatureFlags metadata ([#12369](https://github.com/awsluja/amplify-cli/issues/12369)) ([e520c6c](https://github.com/awsluja/amplify-cli/commit/e520c6c686fa5e7112993745626f737612fa9145))
+* **amplify-util-uibuilder:** support StorageField ([#12386](https://github.com/awsluja/amplify-cli/issues/12386)) ([f158f10](https://github.com/awsluja/amplify-cli/commit/f158f102059ae90cced25560b04887b7df2eb246))
+* **amplify-util-uibuilder:** update codegen-ui to 2.13.1 ([#12565](https://github.com/awsluja/amplify-cli/issues/12565)) ([687dcc2](https://github.com/awsluja/amplify-cli/commit/687dcc276adf72502c87116f6c632b97f4eb649e))
+* **amplify-util-uibuilder:** update codegen-ui with responsive app support ([#11028](https://github.com/awsluja/amplify-cli/issues/11028)) ([2088309](https://github.com/awsluja/amplify-cli/commit/2088309f91f32069765cf514d91067600770a0ac))
+* uibuilder codegen service ([#12896](https://github.com/awsluja/amplify-cli/issues/12896)) ([3fe2f98](https://github.com/awsluja/amplify-cli/commit/3fe2f98a99a9daf22efccb23a031882ea2be899b))
+* **uibuilder:** nested collections support ([#10763](https://github.com/awsluja/amplify-cli/issues/10763)) ([2918eb9](https://github.com/awsluja/amplify-cli/commit/2918eb9fd4495f45a90c5de806e347ee1f03520e))
+* **uibuilder:** nested collections support and codegen dep update ([#10778](https://github.com/awsluja/amplify-cli/issues/10778)) ([87d15cb](https://github.com/awsluja/amplify-cli/commit/87d15cb3e1c75fbd978c6fc7966e42b42e5d856a))
+
+
+### Reverts
+
+* Revert "chore: fixing main to dev merge conflicts (#11696)" ([00fec46](https://github.com/awsluja/amplify-cli/commit/00fec4608096390b5ae2563b5c69453cd48bfa45)), closes [#11696](https://github.com/awsluja/amplify-cli/issues/11696)
+* Revert "feat(uibuilder): nested collections support (#10763)" (#10777) ([c36fa71](https://github.com/awsluja/amplify-cli/commit/c36fa71f54cdce1fb889560c3254d8f662c03cae)), closes [#10763](https://github.com/awsluja/amplify-cli/issues/10763) [#10777](https://github.com/awsluja/amplify-cli/issues/10777)
+* Revert "fix(uibuilder): change recommended ui-react version (#10766)" (#10776) ([150e6dc](https://github.com/awsluja/amplify-cli/commit/150e6dcaa729afd3f34be8ea90cffedd1976067e)), closes [#10766](https://github.com/awsluja/amplify-cli/issues/10766) [#10776](https://github.com/awsluja/amplify-cli/issues/10776)
+
+
+
+
+
 ## [1.9.3](https://github.com/aws-amplify/amplify-cli/compare/@aws-amplify/amplify-util-uibuilder@1.9.2...@aws-amplify/amplify-util-uibuilder@1.9.3) (2023-07-28)
 
 **Note:** Version bump only for package @aws-amplify/amplify-util-uibuilder

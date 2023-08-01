@@ -3,6 +3,51 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 2.4.0-rc.359489160.0 (2023-08-01)
+
+
+### Bug Fixes
+
+* **amplify-go-function-runtime-provider:** fix issue [#3892](https://github.com/aws-amplify/amplify-cli/issues/3892) ([#3987](https://github.com/aws-amplify/amplify-cli/issues/3987)) ([2e266d5](https://github.com/aws-amplify/amplify-cli/commit/2e266d5863036e219b45853364899fed126c36d0))
+* **amplify-go-function-runtime-provider:** localinvoke build error with Go 1.16 ([#7621](https://github.com/aws-amplify/amplify-cli/issues/7621)) ([140a825](https://github.com/aws-amplify/amplify-cli/commit/140a8255a6e4d9faaf8af2bfa1db2302cea1cd23))
+* **amplify-go-function-runtime-provider:** update deadline logic ([#6929](https://github.com/aws-amplify/amplify-cli/issues/6929)) ([d67af76](https://github.com/aws-amplify/amplify-cli/commit/d67af7689efecdd9282eba8cfd678223f729cf64))
+* coerce compare Go version 1.17 to SemVer type ([f7d009a](https://github.com/aws-amplify/amplify-cli/commit/f7d009af78ed576ea44799b2c6854a9d56034379))
+* Dependabot alerts for semver, tough-cookie ([#12962](https://github.com/aws-amplify/amplify-cli/issues/12962)) ([175a86b](https://github.com/aws-amplify/amplify-cli/commit/175a86b89a54c65bb6e68c0609be503d61e39d63))
+* dotnet fucntion provider fixes, package.json cleanup, add pkg refs ([#3826](https://github.com/aws-amplify/amplify-cli/issues/3826)) ([75361fb](https://github.com/aws-amplify/amplify-cli/commit/75361fb266f15ba954a8b8e935874c74f66eb11a))
+* enable building multiple go files, .exe extension for local invoke on Windows only ([#5262](https://github.com/aws-amplify/amplify-cli/issues/5262)) ([1936591](https://github.com/aws-amplify/amplify-cli/commit/1936591b0abfdc04f1172c88c554463c6aeb0877))
+* go build on win ([#6686](https://github.com/aws-amplify/amplify-cli/issues/6686)) ([966726c](https://github.com/aws-amplify/amplify-cli/commit/966726cd2b5dd245e837e9f9a3556bedee57e7e2))
+* golang function build for goversion above 1.17 ([#10569](https://github.com/aws-amplify/amplify-cli/issues/10569)) ([ac31ec0](https://github.com/aws-amplify/amplify-cli/commit/ac31ec020d706eabdeab0405caeea2a7e00a8ae9))
+* incorrect import and update yarn lock ([#6610](https://github.com/aws-amplify/amplify-cli/issues/6610)) ([e40cebd](https://github.com/aws-amplify/amplify-cli/commit/e40cebdc4a6ec8720908151ff4db45ff126a8727))
+* lint warnings ([#12180](https://github.com/aws-amplify/amplify-cli/issues/12180)) ([83d9bf3](https://github.com/aws-amplify/amplify-cli/commit/83d9bf35fa709084605c23bd2f54feadb3bdbb87))
+* manual lint fixes ([#11638](https://github.com/aws-amplify/amplify-cli/issues/11638)) ([2294cf8](https://github.com/aws-amplify/amplify-cli/commit/2294cf8bf1ec2d6d58251649871e6e9617c49b23))
+* mock handles and prints child proc errors ([#6601](https://github.com/aws-amplify/amplify-cli/issues/6601)) ([ce075d9](https://github.com/aws-amplify/amplify-cli/commit/ce075d91c0b93885229ab3c6000a450c6b8cc56a))
+* move py test event to src/event.json ([#3851](https://github.com/aws-amplify/amplify-cli/issues/3851)) ([1c4a0cb](https://github.com/aws-amplify/amplify-cli/commit/1c4a0cb5022869fc6aa3c358e9a4c8935fec2b54))
+* parse appSync go function resolvers to JOSN ([#5297](https://github.com/aws-amplify/amplify-cli/issues/5297)) ([43c6e82](https://github.com/aws-amplify/amplify-cli/commit/43c6e8247210446b133fef799ff21cd70ad9e022))
+* removed unsupported portfinder ([#10269](https://github.com/aws-amplify/amplify-cli/issues/10269)) ([33d8a8f](https://github.com/aws-amplify/amplify-cli/commit/33d8a8ffeebbb9f05f9dbcd8afc6b0629bcf3819))
+* use correct version of amplify-cli-core ([#5661](https://github.com/aws-amplify/amplify-cli/issues/5661)) ([c8c2e1a](https://github.com/aws-amplify/amplify-cli/commit/c8c2e1a9242e2096484f194b9e1944bf34840c51))
+* use go lambda zip tool for packaging go lambda on win ([#5475](https://github.com/aws-amplify/amplify-cli/issues/5475)) ([c932d6f](https://github.com/aws-amplify/amplify-cli/commit/c932d6f264b4260a98ed8f8975a67e47c4c47c85))
+
+
+### Features
+
+* **amplify-go-function-runtime-provider:** add support for go1.16, install deps before build ([#7617](https://github.com/aws-amplify/amplify-cli/issues/7617)) ([4dce75f](https://github.com/aws-amplify/amplify-cli/commit/4dce75fea43b69ce9c2526b1cd171cadd0e2a333))
+* fully populate mock function environment variables ([#6551](https://github.com/aws-amplify/amplify-cli/issues/6551)) ([dceb13a](https://github.com/aws-amplify/amplify-cli/commit/dceb13a76a85a05940078868a3e2e1ca85656938))
+* golang function support for CLI ([#3789](https://github.com/aws-amplify/amplify-cli/issues/3789)) ([3dbc234](https://github.com/aws-amplify/amplify-cli/commit/3dbc23497d0d1c238c6868adcf3a6d00ad909edd))
+* Lambda layers ([#4697](https://github.com/aws-amplify/amplify-cli/issues/4697)) ([4e97400](https://github.com/aws-amplify/amplify-cli/commit/4e974007d95c894ab4108a2dff8d5996e7e3ce25))
+* pre-deploy pull, new login mechanism and pkg cli updates ([#5941](https://github.com/aws-amplify/amplify-cli/issues/5941)) ([7274251](https://github.com/aws-amplify/amplify-cli/commit/7274251faadc1035acce5f44699b172e10e2e67d))
+* prep work for SMS Sandbox support ([#7302](https://github.com/aws-amplify/amplify-cli/issues/7302)) ([d1f85d2](https://github.com/aws-amplify/amplify-cli/commit/d1f85d2e0a9c367b71defefe6d9e00737f681ca4))
+* Separate prod and dev lambda function builds ([#6494](https://github.com/aws-amplify/amplify-cli/issues/6494)) ([2977c6a](https://github.com/aws-amplify/amplify-cli/commit/2977c6a886b33a38ef46f898a2adc1ffdb6d228b))
+* update post-install to copy executable assets to .amplify ([#5595](https://github.com/aws-amplify/amplify-cli/issues/5595)) ([53a23a0](https://github.com/aws-amplify/amplify-cli/commit/53a23a07cbb9e09566c1f0f577ba2b7488bc2eae))
+
+
+### Reverts
+
+* Revert "chore: fixing main to dev merge conflicts (#11696)" ([00fec46](https://github.com/aws-amplify/amplify-cli/commit/00fec4608096390b5ae2563b5c69453cd48bfa45)), closes [#11696](https://github.com/aws-amplify/amplify-cli/issues/11696)
+
+
+
+
+
 ## [2.3.26](https://github.com/aws-amplify/amplify-cli/compare/amplify-go-function-runtime-provider@2.3.25...amplify-go-function-runtime-provider@2.3.26) (2023-07-28)
 
 **Note:** Version bump only for package amplify-go-function-runtime-provider
